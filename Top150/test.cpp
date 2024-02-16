@@ -1,5 +1,5 @@
-
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int removeElement(vector<int>nums, int value) {
@@ -15,17 +15,29 @@ int removeElement(vector<int>nums, int value) {
 
 int main() {
     vector<int> nums;
-    char carac = '[';
-    char end = ']';
     int value, input;
 
-    cin << input;
-    while (input != end) {
-        cin << input;
-        nums.push_back(input);
+    string in;
+    while (cin >> in and in != "]")
+    {
+        if (in != "[" or in != ",")
+        {
+            int intN = stoi(in);
+            nums.push_back(intN);  // 3 2 2 1
+        }
     }
-
-    cin << value;
+    cin >> value;
     cout << removeElement(nums, value);
+    
+
+    // cin << input;
+    // while (input != end) {
+    //     cin << input;
+    //     nums.push_back(input);
+    // }
+
+    // cin << value;
+    // cout << removeElement(nums, value);
+    return 0;
+    
 }
-};
