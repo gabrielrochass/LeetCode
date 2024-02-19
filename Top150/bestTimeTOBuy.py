@@ -33,3 +33,5 @@ while True:
     prices.append(int(value))
 
 print(maxProfit(prices))
+
+
